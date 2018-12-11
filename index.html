@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Home</title>
+    <meta charset="UTF-8">
+
+
+    <link rel="apple-touch-icon" href="style/Apple_touch_icon.png" />
+    <link rel="shortcut icon" href="style/Apple_touch_icon.png" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style/style_bts.css">
+
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand">HOME</a>
+                        <button class="navbar-toggle collapsed" id="collapse" data-toggle="collapse" data-target="#myDropdown">
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="collapse navbar-collapse" class="icons" id="myDropdown">
+
+                        <ul class="nav navbar-nav">
+                            <li><a v-on:click="showPages('about')"><i class="fas fa-file-alt"></i>About</a></li>
+                            <li><a v-on:click="showPages('rules')"><i class="fas fa-clipboard-list"></i>Rules</a></li>
+                            <li><a v-on:click="showPages('contact')"><i class="fas fa-envelope"></i>Contact</a></li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </nav>
+        </header>
+        <div v-if="pages == 'home'" id="index" class="title_page">
+            <div class="container-fluid">
+                <div class="camp">
+
+<!--
+               <pre>
+                   {{$data | json }}
+               </pre>
+-->
+                </div>
+            </div>
+        </div>
+        <div v-if="pages == 'about'" id="about">
+            <div class="container back_img">
+                <div class="content">
+                    <p>The Basketball Women's League is the first tier level women's professional basketball league in Spain. It was founded in 1964 and organized by the Spanish Basketball Federation.</p>
+                    <p>The Women's Basketball League, which is played under FIBA rules, currently consists of 14 teams</p>
+                </div>
+            </div>
+        </div>
+        <div v-if="pages == 'rules'" id="rules">
+            <div class="container back_img content">
+                <h3>Rules and equipment</h3>
+                <p>Rules for women's basketball are nearly the same as the rules for men's basketball. The most noticeable difference is that the circumference of the women's basketball is one inch (2.5 cm) less than the circumference of the size of the men's basketball. Also, in American professional basketball, the women’s three-point line is 1 foot closer to the basket than men’s.</p>
+
+                <h3>Basketball size</h3>
+                <p>The regulation WNBA ball is a minimum 28.5 inches (72.4 cm) in circumference, which is 1.00 inch (2.54 cm) smaller than the NBA ball. This is a standard size 6 ball. As of 2008, this size is used for all senior-level women's competitions worldwide.</p>
+
+                <h3>Court dimensions</h3>
+                <p>The standard court size in U.S. college and WNBA play is 94 feet long by 50 feet wide. The FIBA standard court is slightly smaller at 28 metres long by 15 metres wide (91 ft 10.4 in by 49 ft 2.6 in). For most of its distance, the three-point line is 6.75 m (22 ft 2 in) from the middle of the basket under both FIBA and WNBA rules. Near the sidelines, the three-point line runs parallel to the.sideline, at a distance of exactly 3 feet in the WNBA and 0.9 m in FIBA play. Under NCAA rules, the three-point distance is 20 ft 9 in (6.32 m) for most of the width of the court, with a minimum distance of 4 ft 3 in (1.30 m) from the sidelines. The WNBA, FIBA, and NCAA all use a block/charge arc near each basket, with the WNBA and NCAA distance at 4 ft (1.2 m) from the center of the basket and FIBA using a marginally wider radius of exactly 1.25 m (4 ft 1 in).</p>
+
+                <h3>Shot clock</h3>
+                <p>The WNBA shot clock was changed from 30 to 24 seconds, which has been in FIBA play since 2000, and has been used by the NBA since the shot clock was first introduced. Both men's and women’s NCAA college basketball use a 30-second shot clock; men used a 35-second shot clock until the 2015–16 season, when they switched to 30 seconds as well.</p>
+
+                <h3>Game clock</h3>
+                <p>Most high school games are played with four 8-minute quarters, while NCAA, WNBA, and FIBA games are played in four 10 minute quarters. In 2015-2016 the NCAA</p>
+
+            </div>
+
+        </div>
+        <div v-if="pages == 'contact'" id="contact">
+            <form class="contact_content">
+                <div class="form-group">
+                    <label for="InputName"></label>
+                    <input type="text" class="form-control" id="InputName" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <label for="InputEmail"></label>
+                    <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
+                    <!--            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword1"></label>
+                    <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label for="InputPassword2"></label>
+                    <input type="password" class="form-control" id="InputPassword2" placeholder="Confirm Password">
+                </div>
+                <div class="form-group">
+                    <label for="Textarea"></label>
+                    <textarea class="form-control" id="Textarea" rows="3" placeholder="Message"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+
+        </div>
+        <div v-if="pages == 'games'" id="games">
+            <div class="row">
+                <div class="games_content col-xs-6">
+                    <div class="match_day">
+                        <i class="fas fa-angle-left"></i>
+                        <h3 class="title_day">THURSDAY, 6 DEC</h3>
+                        <i class="fas fa-angle-right"></i>
+                    </div>
+                    <div class="match">
+                        <a v-on:click="showPages('games_detail')" class="link_games_detail">
+                            <div class="title_team">
+                                <img src="teams/AtlantaDream.gif" alt="AtlantaDream_logo_team" class="team_logo">
+                                <p class="team_name_small">Atlanta Dream</p>
+                            </div>
+                            <div class="dates">
+                                <h3 class="match_hour">6 PM</h3>
+                                <p class="vs">vs</p>
+                            </div>
+                            <div class="title_team">
+                                <img src="teams/ChicagoSky.gif" alt="ChicagoSky_logo_team" class="team_logo">
+                                <p class="team_name_small">Chicago Sky</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="games_content_2nd col-xs-6">
+                    <div class="match_day">
+                        <i class="fas fa-angle-left"></i>
+                        <h3 class="title_day">THURSDAY, 6 DEC</h3>
+                        <i class="fas fa-angle-right"></i>
+
+                    </div>
+                    <div class="match">
+                        <a class="link_games_detail">
+                            <div class="title_team">
+                                <img src="teams/AtlantaDream.gif" alt="AtlantaDream_logo_team" class="team_logo">
+                                <p class="team_name_small">Atlanta Dream</p>
+                            </div>
+                            <div class="dates">
+                                <h3 class="match_hour text-center">6 PM</h3>
+                                <p class="vs text-center">vs</p>
+                            </div>
+                            <div class="title_team">
+                                <img src="teams/ChicagoSky.gif" alt="ChicagoSky_logo_team" class="team_logo">
+                                <p class="team_name_small">Chicago Sky</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div v-if="pages == 'games_detail'" id="games_detail">
+            <div class="row">
+                <div class="col-xs-6 games_content">
+                    <div class="match_day">
+                        <i class="fas fa-angle-left"></i>
+                        <h3 class="title_day">THURSDAY, 6 DEC</h3>
+                        <i class="fas fa-angle-right"></i>
+
+                    </div>
+                    <div class="match_location">
+                        <div class="title_team">
+                            <img src="teams/AtlantaDream.gif" alt="AtlantaDream_logo_team" class="team_logo">
+                            <p class="team_name_small">Atlanta Dream</p>
+                        </div>
+                        <div class="dates">
+                            <h3 class="match_hour">6 PM</h3>
+                            <p class="vs">vs</p>
+                        </div>
+                        <div class="title_team">
+                            <img src="teams/ChicagoSky.gif" alt="ChicagoSky_logo_team" class="team_logo">
+                            <p class="team_name_small">Chicago Sky</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid col-xs-6">
+                    <section class="map">
+                        <div>
+                            <h3>Wells Fargo Arena</h3>
+                            <p class="address text-center">Des Moines, IA</p>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2983.9177403800395!2d-93.62325378480925!3d41.592662279245936!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87ee9907866701fd%3A0x3269c355b6172295!2sWells+Fargo+Arena!5e0!3m2!1ses!2ses!4v1543660615842" allowfullscreen></iframe>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div v-if="pages == 'standings'" id="standings">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>R</th>
+                        <th></th>
+
+                        <th>T</th>
+                        <th>W</th>
+                        <th>L</th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr v-for = "item in standings">
+                        <td>#{{item.ranking}}</td>
+                        <td><a href="#"><img v-bind:src="'/teams/' + item.logo" alt="AtlantaDream_logo" class="team_logo_table"></a></td>
+                        <td>{{item.abbr_name}}</td>
+                        <td>{{item.win_games}}</td>
+                        <td>{{item.lost_games}}</td>
+                        <td>{{item.win_pct}}</td>
+                    </tr>
+
+                   
+                </tbody>
+            </table>
+        </div>
+        <div v-if="pages == 'teams'" id="teams">
+            <div class="teams_content text-center">
+                <div class="title_team">
+                    <a v-on:click="showPages('team_detail')"><img src="teams/AtlantaDream.gif" alt="AtlantaDream_logo_team" class="team_logo"></a>
+                    <p class="team_name_small">Atlanta Dream</p>
+                </div>
+                <div class="title_team">
+                    <img src="teams/ChicagoSky.gif" alt="ChicagoSky_logo_team" class="team_logo">
+                    <p class="team_name_small">Chicago Sky</p>
+                </div>
+            </div>
+        </div>
+        <div v-if="pages == 'team_detail'" id="team_detail">
+            <div class="team_detail_content">
+
+                <div class="row">
+                    <div class="col-xs-12 section1">
+                        <div class="col-xs-5 text-center team_logo_container">
+                            <img src="teams/AtlantaDream.gif" alt="AtlantaDream_logo_team" class="team_logo">
+                        </div>
+                        <div class="col-xs-6 info_team">
+                            <h3 class="team_name">Atlanta Dream</h3>
+                            <p class="winpct">WIN %</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row line">
+                    <div class="col-xs-12 text-center">
+                        <p>Player Roster</p>
+                    </div>
+                </div>
+                <div class="row player_info">
+                    <div class="col-xs-6">
+                        <img src="players/JessicaBreland_AtlantaDream.png" class="img-circle img-responsive center-block" alt="player_JessicaBreland">
+                    </div>
+                    <div class="col-xs-6" class="info_player">
+                        <h3 class="player_name">Jessica Breland</h3>
+                        <p class="player_position">GUARD</p>
+                        <p class="player_position">120pt</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div v-show="pages == 'chat'" id="chat">
+            <div class="chat_container container">
+                <div id="posts" class="box">
+                    Loading posts...
+                </div>
+                <div class="inputs">
+                    <input id="textInput" class="input" type="text" onfocus="this.value=''" value= "Your message...">
+
+                    <button id="create-post" class="button is-primary">Send</button>
+<!--                    <button id="login" class="button is-info">Login!</button>-->
+                </div>
+            </div>
+        </div>
+        <div v-show="pages == 'chat_detail'" id="chat_detail">
+           <div class="container chat_detail">
+               <button id="login" class="button is-info">Login!</button>  
+           </div>
+            
+        </div>
+
+        <footer>
+            <nav class="navbar navbar-default navbar-fixed-bottom">
+                <ul class="nav navbar-nav bottom">
+                    <li><a v-on:click="showPages('home')"><i class="fas fa-home"></i></a></li>
+                    <li><a v-on:click="showPages('games')"><i class="fas fa-basketball-ball"></i></a></li>
+                    <li><a v-on:click="showPages('standings')"><i class="fas fa-trophy"></i></a></li>
+                    <li><a v-on:click="showPages('teams')"><i class="fas fa-users"></i></a></li>
+                    <li><a v-on:click="showPages('chat_detail')"><i class="fas fa-comment"></i></a></li>
+                </ul>
+            </nav>
+        </footer>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.3/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.5.1/vue-resource.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB-Mm4Q2X15_SHScVU83J3x5bOrRGduDac",
+            authDomain: "wbleague-115e0.firebaseapp.com",
+            databaseURL: "https://wbleague-115e0.firebaseio.com",
+            projectId: "wbleague-115e0",
+            storageBucket: "wbleague-115e0.appspot.com",
+            messagingSenderId: "830682277441"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    <script src="scripts/data_json.js"></script>
+    <script src="scripts/app.js"></script>
+    
+</body>
+
+</html>
