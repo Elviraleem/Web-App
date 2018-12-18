@@ -5,56 +5,98 @@ var app = new Vue({
     data: {
         pages: "home",
         myData: [],
-        user: null
+        myGames: [],
+        user: null,
+        team: "",
+        game: "",
+
+        
     },
     methods: {
-        showPages: function (id) {
+        showPages: function (id, name) {
+           
             this.pages = id;
+            this.team = name;
+          
+            
             noCollapse();
         },
-
-        getData: function(){
-//            fetch("https://api.myjson.com/bins/k7n66", {
-//                method: "GET",
-//
-//            }).then(function (result) {
-//                return result.json()
-//
-//            }).then(function (data) {
-//                app.myData = data.teams;
-//                console.log(data.teams);
-//                
-//            })
+    
+        
+        getLogo(teamName){
             
-            this.myData = myJson.teams;
+            // En myData (los equipos) encuentra el nombre de cada uno de ellos que será igual al parámetro (nombre del equipo) que le pase.
+            
+            var desiredTeam =  this.myData.find(everyTeam => (everyTeam.first_name + " " + everyTeam.last_name) == teamName);
+            
+            return desiredTeam.logo;
+            
+            //Forma abreviada:
+            
+            //return this.myData.find(everyTeam => (everyTeam.first_name + " " + everyTeam.last_name) == teamName).logo
+            
         },
 
-//                getData: function () {
-//                    this.$http.get(dataURL).then(function (response) {
-//                        this.myData = response.data.teams;
-//                    })
-//                },
-        
-         
-//            
-//        }
+        getData: function () {
+            //            fetch("https://api.myjson.com/bins/k7n66", {
+            //                method: "GET",
+            //
+            //            }).then(function (result) {
+            //                return result.json()
+            //
+            //            }).then(function (data) {
+            //                app.myData = data.teams;
+            //                  app.myGames = data.games;
+            //                console.log(data.teams);
+            //                
+            //            })
+
+            this.myData = myJson.teams;
+            this.myGames = myJson.games;
+        }
+
+        //                getData: function () {
+        //                    this.$http.get(dataURL).then(function (response) {
+        //                        this.myData = response.data.teams;
+        //                    })
+        //                },
+
+
+        //            
+        //        }
 
     },
     created: function () {
         this.getData();
-//        this.standings();
-        
+        //        this.standings();
+
     },
     computed: {
-        standings(){
-            return this.myData.slice().sort(function(a,b){
+        standings: function () {
+            return this.myData.slice().sort(function (a, b) {
                 return b.win_games - a.win_games;
-                
+
             });
+        },
+        teamSelected: function () {
+            return this.myData.find(team => team.first_name == this.team);
+        },
+
+        gameSelected: function () {
+            return this.myGames.find(team => team.id == this.team);
+        },
+        
+        setTheName(){
+            return this.pages.toUpperCase();
         }
+        
+//        getLogo: function() {
+//            return this.myData.find(logo => ;
+//            
+//            
+//            //ves a mydata, busca el team que tenga como nombre el parametro que he pasado y haz un return de su logo url
+//        }
     }
-
-
 
 
 });
@@ -86,14 +128,11 @@ function login() {
 
     // How to Log In   
     firebase.auth().signInWithPopup(provider)
-        .then(function(response){
-        app.pages = "chat";
-    });
-
-
+        .then(function (response) {
+            app.pages = "chat";
+        });
 
 }
-
 
 function writeNewPost() {
 
@@ -123,13 +162,15 @@ function writeNewPost() {
 
 
 function getPosts() {
+        var posts = document.getElementById("posts");
+    
 
     firebase.database().ref('chat').on('value', function (data) {
-        var posts = document.getElementById("posts");
+        posts.innerHTML ='';
         
         /*-- dejar en blanco el input box cada vez que escribes --*/
-        document.getElementById("textInput").value = "";
-        posts.innerHTML = "";
+//        document.getElementById("textInput").value = "";
+//        posts.innerHTML = "";
         //         shouldScroll = posts.scrollTop + posts.clientHeight === posts.scrollHeight;
         //         
         //         if (!shouldScroll) {
@@ -140,10 +181,19 @@ function getPosts() {
         for (var key in messages) {
             var text = document.createElement("div");
             var element = messages[key];
-
+            
+            if(element.name != firebase.auth().currentUser.displayName){
+                text.setAttribute("class", "guest");
+            }else{
+                text.setAttribute("class", "owner");
+            }
+            
+            text.append(element.name + ":" + " ");
             text.append(element.message);
             posts.append(text);
         }
+        posts.scrollTop = posts.scrollHeight;
+        
 
     })
 

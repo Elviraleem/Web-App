@@ -23,7 +23,8 @@ var myJson = {
                     "num": "8",
                     "position": "center",
                     "height": "2.03",
-                    "weight": "98.0"
+                    "weight": "98.0",
+                    "pict" : "DAL_LizCambage.png"
 
                 },
                 {
@@ -33,7 +34,8 @@ var myJson = {
                     "num": "15",
                     "position": "guard",
                     "height": "1.83",
-                    "weight": "75.7"
+                    "weight": "75.7",
+                     "pict" : "DAL_AllishaGray.png"
 
                 },
 
@@ -44,7 +46,8 @@ var myJson = {
                     "num": "25",
                     "position": "forward",
                     "height": "1.91",
-                    "weight": "77.1"
+                    "weight": "77.1",
+                    "pict" : "DAL_GloryJohnson.png"
 
                 },
                 {
@@ -54,7 +57,8 @@ var myJson = {
                     "num": "33",
                     "position": "guard",
                     "height": "1.78",
-                    "weight": "71.7"
+                    "weight": "71.7",
+                    "pict": "DAL_MaggieLucas.png"
 
                 },
                 {
@@ -64,7 +68,8 @@ var myJson = {
                     "num": "13",
                     "position": "forward",
                     "height": "1.83",
-                    "weight": "81.6"
+                    "weight": "81.6",
+                    "pict" : "DAL_Karima_Christmas.png"
 
                 }
             ]
@@ -91,7 +96,8 @@ var myJson = {
                     "num": "51",
                     "position": "forward",
                     "height": "1.91",
-                    "weight": "74.4"
+                    "weight": "74.4",
+                    "pict" : "ATL_Jessica_Breland.png"
 
                 },
 
@@ -102,7 +108,8 @@ var myJson = {
                     "num": "25",
                     "position": "forward",
                     "height": "1.93",
-                    "weight": "79.8"
+                    "weight": "79.8",
+                    "pict": "ATL_MoniqueBillings.png"
 
                 },
 
@@ -113,7 +120,8 @@ var myJson = {
                     "num": "15",
                     "position": "guard",
                     "height": "1.78",
-                    "weight": "70.3"
+                    "weight": "70.3",
+                    "pict":"ATL_TiffanyHayes.png"
 
                 },
                 {
@@ -123,7 +131,8 @@ var myJson = {
                     "num": "7",
                     "position": "guard",
                     "height": "1.75",
-                    "weight": "70.3"
+                    "weight": "70.3",
+                    "pict": "ATL_BrittneySykes.png"
 
                 },
                 {
@@ -133,7 +142,8 @@ var myJson = {
                     "num": "34",
                     "position": "center",
                     "height": "2.01",
-                    "weight": "90.7"
+                    "weight": "90.7",
+                    "pict": "ATL_ImaniMcGee.png"
 
                 }
 
@@ -161,7 +171,8 @@ var myJson = {
                     "num": "1",
                     "position": "guard",
                     "height": "1,75",
-                    "weight": "76.2"
+                    "weight": "76.2",
+                    "pict": "SUN_RachelBanham.png"
 
                 },
 
@@ -172,7 +183,8 @@ var myJson = {
                     "num": "25",
                     "position": "forward",
                     "height": "1.88",
-                    "weight": "83.9"
+                    "weight": "83.9",
+                    "pict": "SUN_AlyssaThomas.png"
 
                 },
 
@@ -183,7 +195,8 @@ var myJson = {
                     "num": "13",
                     "position": "forward",
                     "height": "1.93",
-                    "weight": "78.5"
+                    "weight": "78.5",
+                    "pict": "SUN_ChineyOgwumike.png"
 
                 },
                 {
@@ -193,7 +206,8 @@ var myJson = {
                     "num": "42",
                     "position": "center",
                     "height": "1.91",
-                    "weight": "104.3"
+                    "weight": "104.3",
+                    "pict": "SUN_BrionnaJones.png"
 
                 },
                 {
@@ -203,7 +217,8 @@ var myJson = {
                     "num": "5",
                     "position": "guard",
                     "height": "1.75",
-                    "weight": "65.8"
+                    "weight": "65.8",
+                    "pict": "SUN_JasmineThomas.png"
 
                 }
 
@@ -232,7 +247,8 @@ var myJson = {
                     "num": "1",
                     "position": "guard",
                     "height": "1.85",
-                    "weight": "77.6"
+                    "weight": "77.6",
+                    "pict": "CHI_Diamond_DeSjields.png"
 
                 },
 
@@ -243,7 +259,8 @@ var myJson = {
                     "num": "31",
                     "position": "center",
                     "height": "1.96",
-                    "weight": "97.1"
+                    "weight": "97.1",
+                    "pict": "CHI_StefanieDolson.png"
 
                 },
 
@@ -254,7 +271,8 @@ var myJson = {
                     "num": "15",
                     "position": "forward",
                     "height": "1.80",
-                    "weight": "76.5"
+                    "weight": "76.5",
+                    "pict": "CHI_GabbyWilliams.png"
 
                 },
                 {
@@ -264,7 +282,8 @@ var myJson = {
                     "num": "32",
                     "position": "forward",
                     "height": "1.93",
-                    "weight": "86.2"
+                    "weight": "86.2",
+                    "pict": "CHI_CheyenneParker.png"
 
                 },
                 {
@@ -274,7 +293,8 @@ var myJson = {
                     "num": "21",
                     "position": "guard",
                     "height": "1.68",
-                    "weight": "64.0"
+                    "weight": "64.0",
+                    "pict": "CHI_JamierraFaulkner.png"
 
                 }
 
@@ -302,7 +322,8 @@ var myJson = {
                     "num": "42",
                     "position": "guard",
                     "height": "1.80",
-                    "weight": "78.0"
+                    "weight": "78.0",
+                    "pict": "IND_SheniseJohnson.png"
 
                 },
 
@@ -313,7 +334,8 @@ var myJson = {
                     "num": "4",
                     "position": "forward",
                     "height": "1.88",
-                    "weight": "80.7"
+                    "weight": "80.7",
+                    "pict": "IND_CandiceDupree.png"
 
                 },
 
@@ -324,7 +346,8 @@ var myJson = {
                     "num": "40",
                     "position": "center",
                     "height": "1.93",
-                    "weight": "88.5"
+                    "weight": "88.5",
+                    "pict": "IND_KaylaAlexander.png"
 
                 },
                 {
@@ -334,7 +357,8 @@ var myJson = {
                     "num": "35",
                     "position": "guard",
                     "height": "1.85",
-                    "weight": "83.0"
+                    "weight": "83.0",
+                    "pict": "IND_VictoriaVivians.png"
 
                 },
                 {
@@ -344,7 +368,8 @@ var myJson = {
                     "num": "31",
                     "position": "forward",
                     "height": "1.85",
-                    "weight": "75.7"
+                    "weight": "75.7",
+                    "pict": "IND_AsiaTaylor.png"
 
                 }
 
@@ -372,7 +397,8 @@ var myJson = {
                     "num": "44",
                     "position": "guard",
                     "height": "1.83",
-                    "weight": "73.4"
+                    "weight": "73.4",
+                    "pict": "LAS_KarlieSamuelson.png"
 
                 },
 
@@ -383,7 +409,8 @@ var myJson = {
                     "num": "24",
                     "position": "guard",
                     "height": "1.83",
-                    "weight": "78.3"
+                    "weight": "78.3",
+                    "pict": "LAS_SydneyWiese.png"
 
                 },
 
@@ -394,7 +421,8 @@ var myJson = {
                     "num": "42",
                     "position": "center",
                     "height": "1.93",
-                    "weight": "83.9"
+                    "weight": "83.9",
+                    "pict": "LAS_JantelLavender.png"
 
                 },
                 {
@@ -404,7 +432,8 @@ var myJson = {
                     "num": "30",
                     "position": "forward",
                     "height": "1.88",
-                    "weight": "79.4"
+                    "weight": "79.4",
+                    "pict":"LAS_NnekaOgwumike.png"
 
                 },
                 {
@@ -414,7 +443,8 @@ var myJson = {
                     "num": "3",
                     "position": "forward",
                     "height": "1.93",
-                    "weight": "79.4"
+                    "weight": "79.4",
+                    "pict": "LAS_CandaceParker.png"
 
                 }
 
@@ -424,7 +454,7 @@ var myJson = {
         {
 
             "first_name": "Minnesota",
-            "last_name": "Linx",
+            "last_name": "Lynx",
             "abbr_name": "MIN",
             "ranking": "4",
             "logo": "440px-Minnesota_Lynx_logo.svg.png",
@@ -442,7 +472,8 @@ var myJson = {
                     "num": "32",
                     "position": "forward",
                     "height": "1.88",
-                    "weight": "82.1"
+                    "weight": "82.1",
+                    "pict": "MIN_RebekkaBrunson.png"
 
                 },
 
@@ -453,7 +484,8 @@ var myJson = {
                     "num": "51",
                     "position": "guard",
                     "height": "1.73",
-                    "weight": "63.5"
+                    "weight": "63.5",
+                    "pict": "MIN_SydneyColson.png"
 
                 },
 
@@ -464,7 +496,8 @@ var myJson = {
                     "num": "34",
                     "position": "center",
                     "height": "1.98",
-                    "weight": "99.8"
+                    "weight": "99.8",
+                    "pict": "MIN_SylviaFowles.png"
 
                 },
                 {
@@ -474,7 +507,8 @@ var myJson = {
                     "num": "33",
                     "position": "guard",
                     "height": "1.83",
-                    "weight": "78.0"
+                    "weight": "78.0",
+                    "pict": "MIN_SeimoneAugustus.png"
 
                 },
                 {
@@ -484,7 +518,8 @@ var myJson = {
                     "num": "23",
                     "position": "forward",
                     "height": "1.83",
-                    "weight": "79.4"
+                    "weight": "79.4",
+                    "pict": "MIN_MayaMoore.png"
 
                 }
 
@@ -512,7 +547,8 @@ var myJson = {
                     "num": "31",
                     "position": "center",
                     "height": "1.93",
-                    "weight": "87.1"
+                    "weight": "87.1",
+                    "pict": "NYL_TinaCharles.png"
 
                 },
 
@@ -523,7 +559,8 @@ var myJson = {
                     "num": "0",
                     "position": "forward",
                     "height": "1.85",
-                    "weight": "72.6"
+                    "weight": "72.6",
+                    "pict": "NYL_MarissaColeman.png"
 
                 },
 
@@ -534,7 +571,8 @@ var myJson = {
                     "num": "8",
                     "position": "guard",
                     "height": "1.73",
-                    "weight": "67.1"
+                    "weight": "67.1",
+                    "pict": "NYL_BriaHartley.png"
 
                 },
                 {
@@ -544,7 +582,8 @@ var myJson = {
                     "num": "15",
                     "position": "guard",
                     "height": "1.75",
-                    "weight": "70.8"
+                    "weight": "70.8",
+                    "pict": "NYL_BrittanyBoyd.png"
 
                 },
                 {
@@ -554,7 +593,8 @@ var myJson = {
                     "num": "5",
                     "position": "guard",
                     "height": "1.83",
-                    "weight": "80.1"
+                    "weight": "80.1",
+                    "pict": "NYL_KiaNurse.png"
 
                 }
 
@@ -568,6 +608,7 @@ var myJson = {
     "games": [
 
         {
+            "id": 1,
             "week": 1,
             "month": "Jan",
             "day_num": 5,
@@ -577,9 +618,10 @@ var myJson = {
             "away_team": "Chicago Sky",
             "stadium": "Wintrust Arena",
             "location": "Chicago, IL",
-
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2971.818235960162!2d-87.6235359848001!3d41.85373897922412!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x880e2c7e7ea09951%3A0x7ebe4f3211988b8a!2sWintrust+Arena!5e0!3m2!1ses!2ses!4v1544702362420" 
         },
         {   
+            "id": 2,
             "week": 1,
             "month": "Jan",
             "day_num": 5,
@@ -589,9 +631,11 @@ var myJson = {
             "away_team": "New York Liberty",
             "stadium": "Mohegan Sun Arena",
             "location": "Uncasville, CT",
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.6101761993164!2d-72.09198438481275!3d41.49105027925482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e673abf34376e1%3A0x637818fbd972337e!2sMohegan+Sun+Arena!5e0!3m2!1ses!2ses!4v1544702490275"
 
         },
         {
+            "id": 3,
             "week": 1,
             "month": "Jan",
             "day_num": 6,
@@ -600,9 +644,11 @@ var myJson = {
             "home_team": "Chicago Sky",
             "away_team": "Indiana Fever",
             "stadium": "Bankers Life Fieldhouse",
-            "location": "Indianapolis, IN",    
+            "location": "Indianapolis, IN",
+            "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.9162929349136!2d-86.15772788487196!3d39.7639877794463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50bd40850b3f%3A0xf4180158659c473d!2sBankers+Life+Fieldhouse!5e0!3m2!1ses!2ses!4v1544702623532" 
         },
         {
+            "id": 4,
             "week": 1,
             "month": "Jan",
             "day_num": 6,
@@ -611,9 +657,11 @@ var myJson = {
             "home_team": "Los Angeles Sparks",
             "away_team": "Connecticut Sun",
             "stadium": "Mohegan Sun Arena",
-            "location": "Uncasville, CT",    
+            "location": "Uncasville, CT",  
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.6101761993164!2d-72.09198438481275!3d41.49105027925482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e673abf34376e1%3A0x637818fbd972337e!2sMohegan+Sun+Arena!5e0!3m2!1ses!2ses!4v1544702490275"
         },
-            {
+        {
+            "id": 5,
             "week": 2,
             "month": "Jan",
             "day_num": 10,
@@ -622,9 +670,11 @@ var myJson = {
             "home_team": "Los Angeles Sparks",
             "away_team": "New York Liberty",
             "stadium": "Mohegan Sun Arena",
-            "location": "Uncasville, CT",    
+            "location": "Uncasville, CT", 
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.6101761993164!2d-72.09198438481275!3d41.49105027925482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e673abf34376e1%3A0x637818fbd972337e!2sMohegan+Sun+Arena!5e0!3m2!1ses!2ses!4v1544702490275"
         },
         {
+            "id": 6,
             "week": 2,
             "month": "Jan",
             "day_num": 11,
@@ -633,9 +683,11 @@ var myJson = {
             "home_team": "Dallas Wings",
             "away_team": "Connecticut Sun",
             "stadium": "Mohegan Sun Arena",
-            "location": "Uncasville, CT",    
+            "location": "Uncasville, CT", 
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.6101761993164!2d-72.09198438481275!3d41.49105027925482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e673abf34376e1%3A0x637818fbd972337e!2sMohegan+Sun+Arena!5e0!3m2!1ses!2ses!4v1544702490275"
         },
         {
+            "id": 7,
             "week": 2,
             "month": "Jan",
             "day_num": 11,
@@ -644,9 +696,11 @@ var myJson = {
             "home_team": "Chicago Sky",
             "away_team": "Minnesota Lynx",
             "stadium": "Target Center",
-            "location": "Minneapolis, MN",    
+            "location": "Minneapolis, MN", 
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2822.235446288099!2d-93.27817768468702!3d44.97952797909816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b33291bbf6587b%3A0xd85d3dd117998fec!2sTarget+Center!5e0!3m2!1ses!2ses!4v1544702761122"
         },
         {
+            "id": 8,
             "week": 2,
             "month": "Jan",
             "day_num": 12,
@@ -655,10 +709,12 @@ var myJson = {
             "home_team": "Dallas Wings",
             "away_team": "New York Liberty",
             "stadium": "Mohegan Sun Arena",
-            "location": "1 Mohegan Sun Blvd, Uncasville, CT",    
+            "location": "1 Mohegan Sun Blvd, Uncasville, CT", 
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2988.6101761993164!2d-72.09198438481275!3d41.49105027925482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e673abf34376e1%3A0x637818fbd972337e!2sMohegan+Sun+Arena!5e0!3m2!1ses!2ses!4v1544702490275"
         },
             
         {
+            "id": 9,
             "week": 2,
             "month": "Jan",
             "day_num": 12,
@@ -667,9 +723,11 @@ var myJson = {
             "home_team": "Atlanta Dream",
             "away_team": "Connecticut Sun",
             "stadium": "Webster Bank Arena",
-            "location": "Bridgeport, CT",    
+            "location": "Bridgeport, CT",  
+            "map": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.225737257913!2d-73.18919058482382!3d41.1732433792844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e80e749bec74c5%3A0x492024754614168a!2sWebster+Bank+Arena!5e0!3m2!1ses!2ses!4v1544702836534" 
         },
         {
+            "id": 10,
             "week": 2,
             "month": "Jan",
             "day_num": 13,
@@ -678,7 +736,8 @@ var myJson = {
             "home_team": "Chicago Sky",
             "away_team": "Indiana Fever",
             "stadium": "Bankers Life Fieldhouse",
-            "location": "Indianapolis, IN",    
+            "location": "Indianapolis, IN",   
+            "map":"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3066.9162929349136!2d-86.15772788487196!3d39.7639877794463!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x886b50bd40850b3f%3A0xf4180158659c473d!2sBankers+Life+Fieldhouse!5e0!3m2!1ses!2ses!4v1544702623532" 
         },
             
             
