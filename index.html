@@ -149,7 +149,7 @@
                     <div class="match">
                         <a v-on:click="showPages('games_detail', item.id)" class="link_games_detail">
                             <div class="title_team text-center">
-                                <img :src="'/teams/' + getLogo(item.home_team)" alt="AtlantaDream_logo_team" class="team_logo">
+                                <img :src="'teams/' + getLogo(item.home_team)" alt="AtlantaDream_logo_team" class="team_logo">
                                 <p class="team_name_small">{{item.home_team}}</p>
                             </div>
                             <div class="dates">
@@ -157,7 +157,7 @@
                                 <p class="vs">vs</p>
                             </div>
                             <div class="title_team text-center">
-                                <img :src="'/teams/' + getLogo(item.away_team)" alt="first_name team" class="team_logo">
+                                <img :src="'teams/' + getLogo(item.away_team)" alt="first_name team" class="team_logo">
                                 <p class="team_name_small">{{item.away_team}}</p>
                             </div>
                         </a>
@@ -179,7 +179,7 @@
                     </div>
                     <div class="match_location">
                         <div class="title_team_box text-center">
-                            <img :src="'/teams/' + getLogo(gameSelected.home_team)" alt="AtlantaDream_logo_team" class="team_logo">
+                            <img :src="'teams/' + getLogo(gameSelected.home_team)" alt="AtlantaDream_logo_team" class="team_logo">
                             <p class="team_name_small">{{gameSelected.home_team}}</p>
                         </div>
                         <div class="dates">
@@ -187,7 +187,7 @@
                             <p class="vs">vs</p>
                         </div>
                         <div class="title_team_box text-center">
-                            <img :src="'/teams/' + getLogo(gameSelected.away_team)" alt="ChicagoSky_logo_team" class="team_logo">
+                            <img :src="'teams/' + getLogo(gameSelected.away_team)" alt="ChicagoSky_logo_team" class="team_logo">
                             <p class="team_name_small">{{gameSelected.away_team}}</p>
                         </div>
                     </div>
@@ -220,7 +220,7 @@
                 <tbody>
                     <tr v-for="item in standings">
                         <td>#{{item.ranking}}</td>
-                        <td><a v-on:click="showPages('team_detail', item.first_name)"><img v-bind:src="'/teams/' + item.logo" v-bind:alt="item.first_name + ' ' + item.last_name" class="team_logo_table"></a></td>
+                        <td><a v-on:click="showPages('team_detail', item.first_name)"><img v-bind:src="'teams/' + item.logo" v-bind:alt="item.first_name + ' ' + item.last_name" class="team_logo_table"></a></td>
                         <td>{{item.abbr_name}}</td>
                         <td>{{item.win_games}}</td>
                         <td>{{item.lost_games}}</td>
@@ -236,7 +236,7 @@
         <div v-if="pages == 'teams'" id="teams">
             <div class="teams_content text-center">
                 <div v-for="item in standings" class="title_team_content">
-                    <a v-on:click="showPages('team_detail', item.first_name)"><img class="team_logo" v-bind:src="'/teams/' + item.logo" v-bind:alt="item.first_name + ' ' + item.last_name"></a>
+                    <a v-on:click="showPages('team_detail', item.first_name)"><img class="team_logo" v-bind:src="'teams/' + item.logo" v-bind:alt="item.first_name + ' ' + item.last_name"></a>
                     <!--                    <p class="team_name_small">{{item.first_name}} {{item.last_name}}</p>-->
                 </div>
             </div>
@@ -247,7 +247,7 @@
             <div class="row team_detail_content">
                 <div class="col-12 section1">
                     <div class="col-5">
-                        <img v-bind:src="'/teams/' + teamSelected.logo" class="team_logo_detail" alt="">
+                        <img v-bind:src="'teams/' + teamSelected.logo" class="team_logo_detail" alt="">
                     </div>
                     <div class="col-6">
                         <h3 class="team_name">{{teamSelected.first_name}} {{teamSelected.last_name}}</h3>
@@ -266,7 +266,7 @@
                 <div v-for="item in teamSelected.players" class="row">
                     <div class="player_info">
                         <div class="col-6">
-                            <img v-bind:src="'/players/' + item.pict" class="img-circle img-responsive center-block" v-bind:alt="item.first_name + ' ' + item.last_name ">
+                            <img v-bind:src="'players/' + item.pict" class="img-circle img-responsive center-block" v-bind:alt="item.first_name + ' ' + item.last_name ">
                         </div>
                         <div class="col-6" class="player_info_team">
                             <h3 class="player_name">{{item.first_name}} {{item.last_name}}</h3>

@@ -9,6 +9,7 @@ var app = new Vue({
         user: null,
         team: "",
         game: "",
+        dateGames: {}
 
         
     },
@@ -17,10 +18,17 @@ var app = new Vue({
            
             this.pages = id;
             this.team = name;
+            
           
             
             noCollapse();
         },
+        
+//        getDates: function (){
+//        
+//        var date = this.myGames.day
+//    }
+//        
     
         
         getLogo(teamName){
@@ -87,15 +95,14 @@ var app = new Vue({
         },
         
         setTheName(){
-            return this.pages.toUpperCase();
+            var x = this.pages.split("_");
+            var join = x.join(" ");
+            return join.toUpperCase();
+            //return this.pages.toUpperCase();
         }
         
-//        getLogo: function() {
-//            return this.myData.find(logo => ;
-//            
-//            
-//            //ves a mydata, busca el team que tenga como nombre el parametro que he pasado y haz un return de su logo url
-//        }
+        
+
     }
 
 
