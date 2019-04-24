@@ -1,332 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <title>Home</title>
-    <meta charset="UTF-8">
-
+    <meta charset="UTF-8" />
 
     <link rel="apple-touch-icon" href="style/Apple_touch_icon.png" />
     <link rel="shortcut icon" href="style/Apple_touch_icon.png" />
 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style/style_bts.css">
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+      integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style/style_bts.css" />
 
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="mobile-web-app-capable" content="yes">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+      user-scalable="no"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  </head>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-
-
-</head>
-
-<body>
+  <body>
     <div id="app">
-        <header>
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container">
-                    <div class="navbar-header">
-                        <a href="#" class="navbar-brand">{{setTheName}}</a>
-                        <button class="navbar-toggle collapsed" id="collapse" data-toggle="collapse" data-target="#myDropdown">
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                    </div>
-                    <div class="collapse navbar-collapse" class="icons" id="myDropdown">
+      <header>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container">
+            <div class="navbar-header">
+              <a href="#" class="navbar-brand">{{ setTheName }}</a>
+              <button
+                class="navbar-toggle collapsed"
+                id="collapse"
+                data-toggle="collapse"
+                data-target="#myDropdown"
+              >
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" class="icons" id="myDropdown">
+              <ul class="nav navbar-nav">
+                <li>
+                  <a v-on:click="showPages('about')"
+                    ><i class="fas fa-file-alt"></i>Abouth</a
+                  >
+                </li>
+                <li>
+                  <a v-on:click="showPages('rules')"
+                    ><i class="fas fa-clipboard-list"></i>Rules</a
+                  >
+                </li>
+                <li>
+                  <a v-on:click="showPages('contact')"
+                    ><i class="fas fa-envelope"></i>Contact</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
 
-                        <ul class="nav navbar-nav">
-                            <li><a v-on:click="showPages('about')"><i class="fas fa-file-alt"></i>Abouth</a></li>
-                            <li><a v-on:click="showPages('rules')"><i class="fas fa-clipboard-list"></i>Rules</a></li>
-                            <li><a v-on:click="showPages('contact')"><i class="fas fa-envelope"></i>Contact</a></li>
-                        </ul>
-
-                    </div>
-                </div>
-
-            </nav>
-        </header>
-
-        <!----------------------------------------------------------------------------  HOME -->
-        <div v-if="pages == 'home'" id="index" class="title_page">
-            <div class="container-fluid">
-                <div class="camp">
-                    <!--
+      <!----------------------------------------------------------------------------  HOME -->
+      <div v-if="pages == 'home'" id="index" class="title_page">
+        <div class="container-fluid">
+          <div class="camp">
+            <!--
                <pre>
                    {{$data | json }}
                </pre>
 -->
+          </div>
+        </div>
+      </div>
+
+      <!----------------------------------------------------------------------------  ABOUT -->
+      <div v-if="pages == 'about'" id="about">
+        <div class="container back_img">
+          <div class="content">
+            <p>
+              The Basketball Women's League is the first tier level women's
+              professional basketball league in Spain. It was founded in 1964
+              and organized by the Spanish Basketball Federation.
+            </p>
+            <p>
+              The Women's Basketball League, which is played under FIBA rules,
+              currently consists of 14 teams
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!----------------------------------------------------------------------------  RULES -->
+      <div v-if="pages == 'rules'" id="rules">
+        <div class="container back_img_rules">
+          <div class="content">
+            <h3>Rules and equipment</h3>
+            <p>
+              Rules for women's basketball are nearly the same as the rules for
+              men's basketball. The most noticeable difference is that the
+              circumference of the women's basketball is one inch (2.5 cm) less
+              than the circumference of the size of the men's basketball. Also,
+              in American professional basketball, the women’s three-point line
+              is 1 foot closer to the basket than men’s.
+            </p>
+
+            <h3>Basketball size</h3>
+            <p>
+              The regulation WNBA ball is a minimum 28.5 inches (72.4 cm) in
+              circumference, which is 1.00 inch (2.54 cm) smaller than the NBA
+              ball. This is a standard size 6 ball. As of 2008, this size is
+              used for all senior-level women's competitions worldwide.
+            </p>
+
+            <h3>Court dimensions</h3>
+            <p>
+              The standard court size in U.S. college and WNBA play is 94 feet
+              long by 50 feet wide. The FIBA standard court is slightly smaller
+              at 28 metres long by 15 metres wide (91 ft 10.4 in by 49 ft
+              2.6 in). For most of its distance, the three-point line is 6.75 m
+              (22 ft 2 in) from the middle of the basket under both FIBA and
+              WNBA rules. Near the sidelines, the three-point line runs parallel
+              to the.sideline, at a distance of exactly 3 feet in the WNBA and
+              0.9 m in FIBA play. Under NCAA rules, the three-point distance is
+              20 ft 9 in (6.32 m) for most of the width of the court, with a
+              minimum distance of 4 ft 3 in (1.30 m) from the sidelines. The
+              WNBA, FIBA, and NCAA all use a block/charge arc near each basket,
+              with the WNBA and NCAA distance at 4 ft (1.2 m) from the center of
+              the basket and FIBA using a marginally wider radius of exactly
+              1.25 m (4 ft 1 in).
+            </p>
+
+            <h3>Shot clock</h3>
+            <p>
+              The WNBA shot clock was changed from 30 to 24 seconds, which has
+              been in FIBA play since 2000, and has been used by the NBA since
+              the shot clock was first introduced. Both men's and women’s NCAA
+              college basketball use a 30-second shot clock; men used a
+              35-second shot clock until the 2015–16 season, when they switched
+              to 30 seconds as well.
+            </p>
+
+            <h3>Game clock</h3>
+            <p>
+              Most high school games are played with four 8-minute quarters,
+              while NCAA, WNBA, and FIBA games are played in four 10 minute
+              quarters. In 2015-2016 the NCAA
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!----------------------------------------------------------------------------------------  CONTACT -->
+      <div v-if="pages == 'contact'" id="contact">
+        <div class="container-fluid">
+          <div class="row justify-content-md-center">
+            <form class="contact_content">
+              <div class="data_info">
+                <div class="form-group">
+                  <label for="InputName"></label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="InputName"
+                    placeholder="Name"
+                  />
                 </div>
+                <div class="form-group">
+                  <label for="InputEmail"></label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="InputEmail"
+                    aria-describedby="emailHelp"
+                    placeholder="Enter email"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="InputPassword1"></label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="InputPassword1"
+                    placeholder="Password"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="InputPassword2"></label>
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="InputPassword2"
+                    placeholder="Confirm Password"
+                  />
+                </div>
+              </div>
+              <div class="info_message">
+                <div class="form-group">
+                  <label for="Textarea"></label>
+                  <textarea
+                    class="form-control message_box"
+                    id="Textarea"
+                    rows="3"
+                    placeholder="Message"
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-----------------------------------------------------------------------------------------  GAMES -->
+      <div v-if="pages == 'games'" id="games">
+        <div class="row games_box">
+          <div
+            v-for="(item, index) in myGames"
+            class="games_content"
+            class="col-6-xs"
+          >
+            <div
+              v-show="index == 0 || item.day_num != myGames[index-1].day_num"
+              class="match_day"
+            >
+              <!--                        <i class="fas fa-angle-left"></i>-->
+              <h3 class="title_day">
+                {{ item.day }}, {{ item.day_num }} {{ item.month }}
+              </h3>
+              <!--                        <i class="fas fa-angle-right"></i>-->
             </div>
-        </div>
-
-        <!----------------------------------------------------------------------------  ABOUT -->
-        <div v-if="pages == 'about'" id="about">
-            <div class="container back_img">
-                <div class="content">
-                    <p>The Basketball Women's League is the first tier level women's professional basketball league in Spain. It was founded in 1964 and organized by the Spanish Basketball Federation.</p>
-                    <p>The Women's Basketball League, which is played under FIBA rules, currently consists of 14 teams</p>
+            <div class="match">
+              <a
+                v-on:click="showPages('games_detail', item.id)"
+                class="link_games_detail"
+              >
+                <div class="title_team text-center">
+                  <img
+                    :src="'teams/' + getLogo(item.home_team)"
+                    alt="AtlantaDream_logo_team"
+                    class="team_logo"
+                  />
+                  <p class="team_name_small">{{ item.home_team }}</p>
                 </div>
+                <div class="dates">
+                  <h3 class="match_hour">{{ item.hour }}</h3>
+                  <p class="vs">vs</p>
+                </div>
+                <div class="title_team text-center">
+                  <img
+                    :src="'teams/' + getLogo(item.away_team)"
+                    alt="first_name team"
+                    class="team_logo"
+                  />
+                  <p class="team_name_small">{{ item.away_team }}</p>
+                </div>
+              </a>
             </div>
+          </div>
         </div>
+      </div>
 
-        <!----------------------------------------------------------------------------  RULES -->
-        <div v-if="pages == 'rules'" id="rules">
-            <div class="container back_img_rules">
-                <div class="content">
-                    <h3>Rules and equipment</h3>
-                    <p>Rules for women's basketball are nearly the same as the rules for men's basketball. The most noticeable difference is that the circumference of the women's basketball is one inch (2.5 cm) less than the circumference of the size of the men's basketball. Also, in American professional basketball, the women’s three-point line is 1 foot closer to the basket than men’s.</p>
-
-                    <h3>Basketball size</h3>
-                    <p>The regulation WNBA ball is a minimum 28.5 inches (72.4 cm) in circumference, which is 1.00 inch (2.54 cm) smaller than the NBA ball. This is a standard size 6 ball. As of 2008, this size is used for all senior-level women's competitions worldwide.</p>
-
-                    <h3>Court dimensions</h3>
-                    <p>The standard court size in U.S. college and WNBA play is 94 feet long by 50 feet wide. The FIBA standard court is slightly smaller at 28 metres long by 15 metres wide (91 ft 10.4 in by 49 ft 2.6 in). For most of its distance, the three-point line is 6.75 m (22 ft 2 in) from the middle of the basket under both FIBA and WNBA rules. Near the sidelines, the three-point line runs parallel to the.sideline, at a distance of exactly 3 feet in the WNBA and 0.9 m in FIBA play. Under NCAA rules, the three-point distance is 20 ft 9 in (6.32 m) for most of the width of the court, with a minimum distance of 4 ft 3 in (1.30 m) from the sidelines. The WNBA, FIBA, and NCAA all use a block/charge arc near each basket, with the WNBA and NCAA distance at 4 ft (1.2 m) from the center of the basket and FIBA using a marginally wider radius of exactly 1.25 m (4 ft 1 in).</p>
-
-                    <h3>Shot clock</h3>
-                    <p>The WNBA shot clock was changed from 30 to 24 seconds, which has been in FIBA play since 2000, and has been used by the NBA since the shot clock was first introduced. Both men's and women’s NCAA college basketball use a 30-second shot clock; men used a 35-second shot clock until the 2015–16 season, when they switched to 30 seconds as well.</p>
-
-                    <h3>Game clock</h3>
-                    <p>Most high school games are played with four 8-minute quarters, while NCAA, WNBA, and FIBA games are played in four 10 minute quarters. In 2015-2016 the NCAA</p>
-
-                </div>
+      <!------------------------------------------------------------------------------------------  GAMES_DETAIL -->
+      <div v-if="pages == 'games_detail'" id="games_detail">
+        <div class="row">
+          <div class="col-xs-12 games_content_detail">
+            <div class="match_day">
+              <!--                        <i class="fas fa-angle-left"></i>-->
+              <h3 class="title_day">
+                {{ gameSelected.day }}, {{ gameSelected.day_num }}
+                {{ gameSelected.month }}
+              </h3>
+              <!--                        <i class="fas fa-angle-right"></i>-->
             </div>
-
-        </div>
-
-        <!----------------------------------------------------------------------------------------  CONTACT -->
-        <div v-if="pages == 'contact'" id="contact">
-            <div class="container-fluid">
-                <div class="row justify-content-md-center">
-
-                    <form class="contact_content">
-                        <div class="data_info">
-
-                            <div class="form-group">
-                                <label for="InputName"></label>
-                                <input type="text" class="form-control" id="InputName" placeholder="Name">
-                            </div>
-                            <div class="form-group">
-                                <label for="InputEmail"></label>
-                                <input type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" placeholder="Enter email">
-
-                            </div>
-                            <div class="form-group">
-                                <label for="InputPassword1"></label>
-                                <input type="password" class="form-control" id="InputPassword1" placeholder="Password">
-                            </div>
-                            <div class="form-group">
-                                <label for="InputPassword2"></label>
-                                <input type="password" class="form-control" id="InputPassword2" placeholder="Confirm Password">
-                            </div>
-                        </div>
-                        <div class="info_message">
-                            <div class="form-group">
-                                <label for="Textarea"></label>
-                                <textarea class="form-control message_box" id="Textarea" rows="3" placeholder="Message"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
-                        </div>
-                    </form>
-                </div>
-
+            <div class="match_location">
+              <div class="title_team_box text-center">
+                <img
+                  :src="'teams/' + getLogo(gameSelected.home_team)"
+                  alt="AtlantaDream_logo_team"
+                  class="team_logo"
+                />
+                <p class="team_name_small">{{ gameSelected.home_team }}</p>
+              </div>
+              <div class="dates">
+                <h3 class="match_hour">{{ gameSelected.hour }}</h3>
+                <p class="vs">vs</p>
+              </div>
+              <div class="title_team_box text-center">
+                <img
+                  :src="'teams/' + getLogo(gameSelected.away_team)"
+                  alt="ChicagoSky_logo_team"
+                  class="team_logo"
+                />
+                <p class="team_name_small">{{ gameSelected.away_team }}</p>
+              </div>
             </div>
+          </div>
+          <div class="grid col-xs-12">
+            <section class="map">
+              <div>
+                <h3>{{ gameSelected.stadium }}</h3>
+                <p class="address text-center">{{ gameSelected.location }}</p>
+              </div>
+              <iframe :src="gameSelected.map" allowfullscreen></iframe>
+            </section>
+          </div>
         </div>
+      </div>
 
+      <!-----------------------------------------------------------------------------------------------  STANDINGS -->
+      <div v-if="pages == 'standings'" id="standings">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>R</th>
+              <th></th>
+              <th>T</th>
+              <th>W</th>
+              <th>L</th>
+              <th>%</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="item in standings">
+              <td>#{{ item.ranking }}</td>
+              <td>
+                <a v-on:click="showPages('team_detail', item.first_name)"
+                  ><img
+                    v-bind:src="'teams/' + item.logo"
+                    v-bind:alt="item.first_name + ' ' + item.last_name"
+                    class="team_logo_table"
+                /></a>
+              </td>
+              <td>{{ item.abbr_name }}</td>
+              <td>{{ item.win_games }}</td>
+              <td>{{ item.lost_games }}</td>
+              <td>{{ item.win_pct }}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
-        <!-----------------------------------------------------------------------------------------  GAMES -->
-        <div v-if="pages == 'games'" id="games">
-            <div class="row games_box">
-                <div v-for="(item, index) in myGames" class="games_content" class="col-6-xs">
-                    <div v-show="index == 0 || item.day_num != myGames[index-1].day_num" class="match_day">
-                        <!--                        <i class="fas fa-angle-left"></i>-->
-                        <h3 class="title_day">{{item.day}}, {{item.day_num}} {{item.month}}</h3>
-                        <!--                        <i class="fas fa-angle-right"></i>-->
-                    </div>
-                    <div class="match">
-                        <a v-on:click="showPages('games_detail', item.id)" class="link_games_detail">
-                            <div class="title_team text-center">
-                                <img :src="'teams/' + getLogo(item.home_team)" alt="AtlantaDream_logo_team" class="team_logo">
-                                <p class="team_name_small">{{item.home_team}}</p>
-                            </div>
-                            <div class="dates">
-                                <h3 class="match_hour">{{item.hour}}</h3>
-                                <p class="vs">vs</p>
-                            </div>
-                            <div class="title_team text-center">
-                                <img :src="'teams/' + getLogo(item.away_team)" alt="first_name team" class="team_logo">
-                                <p class="team_name_small">{{item.away_team}}</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+      <!-----------------------------------------------------------------------------------------------  TEAMS -->
+      <div v-if="pages == 'teams'" id="teams">
+        <div class="teams_content text-center">
+          <div v-for="item in standings" class="title_team_content">
+            <a v-on:click="showPages('team_detail', item.first_name)"
+              ><img
+                class="team_logo"
+                v-bind:src="'teams/' + item.logo"
+                v-bind:alt="item.first_name + ' ' + item.last_name"
+            /></a>
+            <!--                    <p class="team_name_small">{{item.first_name}} {{item.last_name}}</p>-->
+          </div>
+        </div>
+      </div>
 
+      <!-----------------------------------------------------------------------------------------------  TEAM_DETAIL -->
+      <div v-if="pages == 'team_detail'" id="team_detail">
+        <div class="row team_detail_content">
+          <div class="col-12 section1">
+            <div class="col-5">
+              <img
+                v-bind:src="'teams/' + teamSelected.logo"
+                class="team_logo_detail"
+                alt=""
+              />
             </div>
-        </div>
-
-        <!------------------------------------------------------------------------------------------  GAMES_DETAIL -->
-        <div v-if="pages == 'games_detail'" id="games_detail">
-            <div class="row">
-                <div class="col-xs-6 games_content">
-                    <div class="match_day">
-                        <!--                        <i class="fas fa-angle-left"></i>-->
-                        <h3 class="title_day">{{gameSelected.day}}, {{gameSelected.day_num}} {{gameSelected.month}}</h3>
-                        <!--                        <i class="fas fa-angle-right"></i>-->
-
-                    </div>
-                    <div class="match_location">
-                        <div class="title_team_box text-center">
-                            <img :src="'teams/' + getLogo(gameSelected.home_team)" alt="AtlantaDream_logo_team" class="team_logo">
-                            <p class="team_name_small">{{gameSelected.home_team}}</p>
-                        </div>
-                        <div class="dates">
-                            <h3 class="match_hour">{{gameSelected.hour}}</h3>
-                            <p class="vs">vs</p>
-                        </div>
-                        <div class="title_team_box text-center">
-                            <img :src="'teams/' + getLogo(gameSelected.away_team)" alt="ChicagoSky_logo_team" class="team_logo">
-                            <p class="team_name_small">{{gameSelected.away_team}}</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="grid col-xs-6">
-                    <section class="map">
-                        <div>
-                            <h3>{{gameSelected.stadium}}</h3>
-                            <p class="address text-center">{{gameSelected.location}}</p>
-                        </div>
-                        <iframe :src="gameSelected.map" allowfullscreen></iframe>
-                    </section>
-                </div>
+            <div class="col-6">
+              <h3 class="team_name">
+                {{ teamSelected.first_name }} {{ teamSelected.last_name }}
+              </h3>
+              <div class="info_team">
+                <p class="winpct">
+                  <span>Ranking:</span> {{ teamSelected.ranking }}
+                </p>
+                <p class="founded">
+                  <span>Founded: </span>{{ teamSelected.year_founded }}
+                </p>
+                <p class="coach">
+                  <span>Head Coach:</span> {{ teamSelected.head_coach_fn }}
+                  {{ teamSelected.head_coach_ln }}
+                </p>
+              </div>
             </div>
-        </div>
-
-        <!-----------------------------------------------------------------------------------------------  STANDINGS -->
-        <div v-if="pages == 'standings'" id="standings">
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>R</th>
-                        <th></th>
-                        <th>T</th>
-                        <th>W</th>
-                        <th>L</th>
-                        <th>%</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr v-for="item in standings">
-                        <td>#{{item.ranking}}</td>
-                        <td><a v-on:click="showPages('team_detail', item.first_name)"><img v-bind:src="'teams/' + item.logo" v-bind:alt="item.first_name + ' ' + item.last_name" class="team_logo_table"></a></td>
-                        <td>{{item.abbr_name}}</td>
-                        <td>{{item.win_games}}</td>
-                        <td>{{item.lost_games}}</td>
-                        <td>{{item.win_pct}}</td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-        </div>
-
-        <!-----------------------------------------------------------------------------------------------  TEAMS -->
-        <div v-if="pages == 'teams'" id="teams">
-            <div class="teams_content text-center">
-                <div v-for="item in standings" class="title_team_content">
-                    <a v-on:click="showPages('team_detail', item.first_name)"><img class="team_logo" v-bind:src="'teams/' + item.logo" v-bind:alt="item.first_name + ' ' + item.last_name"></a>
-                    <!--                    <p class="team_name_small">{{item.first_name}} {{item.last_name}}</p>-->
-                </div>
+          </div>
+          <div class="row line">
+            <div class="col-12 text-center">
+              <p>Player Roster</p>
             </div>
-        </div>
-
-        <!-----------------------------------------------------------------------------------------------  TEAM_DETAIL -->
-        <div v-if="pages == 'team_detail'" id="team_detail">
-            <div class="row team_detail_content">
-                <div class="col-12 section1">
-                    <div class="col-5">
-                        <img v-bind:src="'teams/' + teamSelected.logo" class="team_logo_detail" alt="">
-                    </div>
-                    <div class="col-6">
-                        <h3 class="team_name">{{teamSelected.first_name}} {{teamSelected.last_name}}</h3>
-                        <div class="info_team">
-                            <p class="winpct"><span>Ranking:</span> {{teamSelected.ranking}}</p>
-                            <p class="founded"><span>Founded: </span>{{teamSelected.year_founded}}</p>
-                            <p class="coach"><span>Head Coach:</span> {{teamSelected.head_coach_fn}} {{teamSelected.head_coach_ln}}</p>
-                        </div>
-                    </div>
+          </div>
+          <div v-for="item in teamSelected.players" class="row">
+            <div class="player_info">
+              <div class="col-6">
+                <img
+                  v-bind:src="'players/' + item.pict"
+                  class="img-circle img-responsive center-block"
+                  v-bind:alt="item.first_name + ' ' + item.last_name "
+                />
+              </div>
+              <div class="col-6" class="player_info_team">
+                <h3 class="player_name">
+                  {{ item.first_name }} {{ item.last_name }}
+                </h3>
+                <div class="info_team">
+                  <p class="player_position">{{ item.position }}</p>
+                  <div class="measures">
+                    <p class="player_height">{{ item.height }} m.</p>
+                    <p class="player_weight">{{ item.weight }} kg.</p>
+                  </div>
                 </div>
-                <div class="row line">
-                    <div class="col-12 text-center">
-                        <p>Player Roster</p>
-                    </div>
-                </div>
-                <div v-for="item in teamSelected.players" class="row">
-                    <div class="player_info">
-                        <div class="col-6">
-                            <img v-bind:src="'players/' + item.pict" class="img-circle img-responsive center-block" v-bind:alt="item.first_name + ' ' + item.last_name ">
-                        </div>
-                        <div class="col-6" class="player_info_team">
-                            <h3 class="player_name">{{item.first_name}} {{item.last_name}}</h3>
-                            <div class="info_team">
-                                <p class="player_position">{{item.position}}</p>
-                                <div class="measures">
-                                    <p class="player_height">{{item.height}} m.</p>
-                                    <p class="player_weight">{{item.weight}} kg.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-
+          </div>
         </div>
+      </div>
 
-        <!-----------------------------------------------------------------------------------------------  CHAT -->
+      <!-----------------------------------------------------------------------------------------------  CHAT -->
 
-        <div v-show="pages == 'chat'" id="chat">
-            <!--
+      <div v-show="pages == 'chat'" id="chat">
+        <!--
            <div id="header">
                <h3>CHAT</h3>
            </div>
 -->
-            <div class="chat_container container">
-                <div id="posts" class="box">
-                    <!--                    Loading posts...-->
-                </div>
-                <div class="inputs">
-                    <input id="textInput" class="input" type="text" onfocus="this.value=''" value="Your message...">
+        <div class="chat_container container">
+          <div id="posts" class="box">
+            <!--                    Loading posts...-->
+          </div>
+          <div class="inputs">
+            <input
+              id="textInput"
+              class="input"
+              type="text"
+              onfocus="this.value=''"
+              value="Your message..."
+            />
 
-                    <button id="create-post" class="button is-primary">Send</button>
-                    <!--                    <button id="login" class="button is-info">Login!</button>-->
-                </div>
-            </div>
+            <button id="create-post" class="button is-primary">Send</button>
+            <!--                    <button id="login" class="button is-info">Login!</button>-->
+          </div>
         </div>
+      </div>
 
-        <!-----------------------------------------------------------------------------------------------  CHAT_DETAIL -->
-        <div v-show="pages == 'chat-login'" id="chat-login">
-            <div class="container chat_detail">
-                <button id="login" class="button is-info">Login!</button>
-            </div>
-
+      <!-----------------------------------------------------------------------------------------------  CHAT_DETAIL -->
+      <div v-show="pages == 'chat-login'" id="chat-login">
+        <div class="container chat_detail">
+          <button id="login" class="button is-info">Login!</button>
         </div>
+      </div>
 
-        <footer>
-            <nav class="navbar navbar-default navbar-fixed-bottom">
-                <ul class="nav navbar-nav bottom">
-                    <li><a v-on:click="showPages('home')"><i class="fas fa-home"></i></a></li>
-                    <li><a v-on:click="showPages('games')"><i class="fas fa-basketball-ball"></i></a></li>
-                    <li><a v-on:click="showPages('standings')"><i class="fas fa-trophy"></i></a></li>
-                    <li><a v-on:click="showPages('teams')"><i class="fas fa-users"></i></a></li>
-                    <li><a v-on:click="showPages('chat-login')"><i class="fas fa-comment"></i></a></li>
-                </ul>
-            </nav>
-        </footer>
-
+      <footer>
+        <nav class="navbar navbar-default navbar-fixed-bottom">
+          <ul class="nav navbar-nav bottom">
+            <li>
+              <a v-on:click="showPages('home')"><i class="fas fa-home"></i></a>
+            </li>
+            <li>
+              <a v-on:click="showPages('games')"
+                ><i class="fas fa-basketball-ball"></i
+              ></a>
+            </li>
+            <li>
+              <a v-on:click="showPages('standings')"
+                ><i class="fas fa-trophy"></i
+              ></a>
+            </li>
+            <li>
+              <a v-on:click="showPages('teams')"
+                ><i class="fas fa-users"></i
+              ></a>
+            </li>
+            <li>
+              <a v-on:click="showPages('chat-login')"
+                ><i class="fas fa-comment"></i
+              ></a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
     </div>
-
 
     <!-----------------------------------------------------------------------------------------------  SCRIPTS -->
 
@@ -337,21 +500,18 @@
 
     <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase.js"></script>
     <script>
-        // Initialize Firebase
-        var config = {
-            apiKey: "AIzaSyB-Mm4Q2X15_SHScVU83J3x5bOrRGduDac",
-            authDomain: "wbleague-115e0.firebaseapp.com",
-            databaseURL: "https://wbleague-115e0.firebaseio.com",
-            projectId: "wbleague-115e0",
-            storageBucket: "wbleague-115e0.appspot.com",
-            messagingSenderId: "830682277441"
-        };
-        firebase.initializeApp(config);
-
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyB-Mm4Q2X15_SHScVU83J3x5bOrRGduDac",
+        authDomain: "wbleague-115e0.firebaseapp.com",
+        databaseURL: "https://wbleague-115e0.firebaseio.com",
+        projectId: "wbleague-115e0",
+        storageBucket: "wbleague-115e0.appspot.com",
+        messagingSenderId: "830682277441"
+      };
+      firebase.initializeApp(config);
     </script>
     <script src="scripts/data_json.js"></script>
     <script src="scripts/app.js"></script>
-
-</body>
-
+  </body>
 </html>
